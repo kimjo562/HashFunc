@@ -41,15 +41,14 @@ namespace HashFunction
 		return (hash & 0xFFFFFF);
 	}
 
-	unsigned int leetHash(const char* data, unsigned int length)
+	unsigned int vowelHash(const char* data, unsigned int length)
 	{
 		unsigned int hash = 0;
-
-		for (unsigned int i = 0; i < length; i++)
+		for (unsigned int i = 0; i < length; i++) 
 		{
-			hash = (hash * 1337) + data[i];
+			hash = (hash * 240) + data[i] * 'a' * 'e' * 'i' * 'o' * 'u'* 36;
 		}
 
-		return (hash & 0xF1337FF);
+		return (hash);
 	}
 };
